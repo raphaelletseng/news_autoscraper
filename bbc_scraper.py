@@ -18,9 +18,7 @@ data = {
 }
 
 headlines = []
-for idx, h in enumerate(bbc_headlines[:4]):
-    #print(t.text)
-    #print(t)
+for idx, h in enumerate(bbc_headlines[:3]):
     try:
         headlines.append(h.text)
     except: 
@@ -38,8 +36,5 @@ except:
     existing_df = pd.DataFrame([])
 
 combined = pd.concat([df, existing_df], ignore_index=True)
-print(combined.head())
 
 combined.to_csv("updated_headlines.csv", index = False)
-
-
