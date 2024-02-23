@@ -29,8 +29,10 @@ jobs:
         python-version: '3.10'
     - name: Install all necessary packages
       run: pip install jupyter lxml pandas requests beautifulsoup4 html5lib
-    - name: Scraping today's data
+    - name: Scraping aj's data
       run: python "aj_scraper.py" 
+    - name: Scraping bbc's data
+      run: python "bbc_scraper.py"
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
