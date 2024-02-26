@@ -30,6 +30,7 @@ for i in range(0, len(headlines)):
     data[key] = value
 
 df = pd.DataFrame(data, index= [0])
+print(df.head())
 try:
     existing_df = pd.read_csv("updated_headlines.csv")
 except:
@@ -37,4 +38,4 @@ except:
 
 combined = pd.concat([df, existing_df], ignore_index=True)
 
-combined.to_csv("updated_headlines.csv", index = False)
+combined.to_csv("updated_headlines.csv", index=False)
