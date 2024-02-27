@@ -1,4 +1,4 @@
-# aj_autoscraper
+# news_autoscraper
 
 A daily scraper for the top 3 news headlines from:
 - [Al Jazeera](https://www.aljazeera.com/)
