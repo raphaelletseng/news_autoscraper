@@ -4,19 +4,45 @@
         <meta charset="UTF-8">
         <title> News Scraper </title>
         <style>
-            p {
+            body {
                 font-family: 'Courier New';
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                color: blueviolet;
+            }
+
+            footer p {
+                font-size: 10px;
             }
         </style>
     </head>
     <body>
-        <p> Top 3 News Headlines </p>
-        <p> Scraped daily </p>
+        <h1> Top 3 News Headlines </h1>
+        <p> Scraped daily from 
+            <a href="https://www.aljazeera.com/">Al Jazeera</a>, 
+            <a href="https://www.lemonde.fr/en/">Le Monde</a>,
+            <a href="https://www.bbc.com/">BBC</a>,
+            <a href="https://www.economist.com/">The Economist</a>
+        
+        </p>
         
         <div class="graphic">
             <iframe title="" aria-label="Table" id="datawrapper-chart-AiUJ1" src="https://datawrapper.dwcdn.net/AiUJ1/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1888" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
             </script>
         </div>
         
+        <footer>
+            <p> Using <a href="https://beautiful-soup-4.readthedocs.io/en/latest/">Beautiful Soup</a>, <a href="www.jonathansoma.com">Jonathan Soma</a>, <a href="https://www.datawrapper.de/">Datawrapper</a></p>
+        </footer>
+
         </body>
 </html>
