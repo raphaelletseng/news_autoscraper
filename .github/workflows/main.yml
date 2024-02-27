@@ -35,6 +35,8 @@ jobs:
       run: python "bbc_scraper.py"
     - name: Scraping le monde's english data
       run: python "lm_scraper.py"
+    - name: Scraping the economist's data
+      run: python "the_economist_scraper.py"
     - name: Commit and push any changes
       run: |-
         git config user.name "Automated"
