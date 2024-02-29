@@ -35,11 +35,9 @@ nLinks = dups(links)
 for i in range(0, len(nHeadlines)):
     key = f'headline_{i+1}'
     value = str(nHeadlines[i]) + ", " + aj_url + str(nLinks[i]['href'])
-    print(value)
     data[key] = value
 
 df = pd.DataFrame(data, index=[0])
-print(df.head())
 
 try:
     existing_df = pd.read_csv("updated_headlines.csv")
