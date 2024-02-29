@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-url = "https://www.economist.com/"
+url = "https://www.economist.com"
 response = requests.get(url)
 te_soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -19,15 +19,17 @@ data = {
 }
 
 headlines = []
+links = []
 for idx, h in enumerate(te_h3[:3]):
     try:
         headlines.append(h.text)
+        links.append(h.find('a', href=True))
     except: 
         pass
 
 for i in range(0, len(headlines)):
     key = f'headline_{i+1}'
-    value = headlines[i]
+    value = str(headlines[i]) + ", " + url + str(links[i]['href'])
     data[key] = value
 
 df = pd.DataFrame(data, index= [0])
