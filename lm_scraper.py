@@ -11,14 +11,14 @@ lm_second_headlines = lm_soup.select_one("section.area--headlines").select("p.ar
 data = {
     'org': lm_url,
     'scraped_at': datetime.datetime.now(),
-    'headline_1': lm_soup.select_one("section.area--main").select_one("p.article__title-label"),
-    'headline_2': lm_second_headlines[0].text,
-    'headline_3': lm_second_headlines[1].text,
+    'headline_1': str(lm_soup.select_one("section.area--main").select_one("p.article__title-label").text) + ', ' + str(lm_soup.select_one("section.area--main").select_one("a")['href']),
+    'headline_2': str(lm_second_headlines[0].text) + ', ' + str(lm_soup.select_one("section.area--headlines").select("a")[0]['href']),
+    'headline_3': str(lm_second_headlines[1].text) + ', ' + str(lm_soup.select_one("section.area--headlines").select("a")[1]['href']),
 }
 headlines=[]
 
 df = pd.DataFrame(data, index=[0])
-print(df.head())
+#print(df.to_string())
 
 try:
     existing_df = pd.read_csv("updated_headlines.csv")
