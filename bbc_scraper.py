@@ -18,7 +18,8 @@ data = {
 }
 
 headlines = []
-for idx, h in enumerate(bbc_headlines[:3]):
+# Skip first two main headlines in BBC 
+for idx, h in enumerate(bbc_headlines[2:5]):
     try:
         headlines.append(h.text)
     except: 
@@ -30,7 +31,6 @@ for i in range(0, len(headlines)):
     data[key] = value
 
 df = pd.DataFrame(data, index= [0])
-print(df.head())
 try:
     existing_df = pd.read_csv("updated_headlines.csv")
 except:
