@@ -15,4 +15,6 @@ Resources: [https://jonathansoma.com/](https://jonathansoma.com/)
 ### Analysis
 
 Take a look at [`pie_charts.ipynb`](https://github.com/raphaelletseng/news_autoscraper/blob/main/pie_charts.ipynb) for basic counts of most occuring words between two dates, after removing stopwords:
+![2024_count_fig](2024_graphs.png)
+
 ![top_10_count_fig](top_10_words_2024-11-01.png)
